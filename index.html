@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-tittle ">
+        <h1>bookmarker</h1>
+    </div>
+   
+
+   <div class="bookmark-body w-100 mx-auto p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4 container">
+    <h2>
+        Book mark your favorite sites
+
+    </h2>
+
+    <div class="w-100 mx-auto">
+        <div class="pb-2">
+            <span class="pe-2"><i class="fa-solid fa-book"></i></span>
+            <label for="bookMarkName" >site Name</label>
+        </div>
+        <input type="text" id="bookMarkName" placeholder="Bookmark Name" oninput="regexNameSite()" class="form-control p-2">
+        <p class="text-danger d-none" id="messageNameSite"> You should enter site name contain at least 3 characters</p>
+    </div>
+    <div class="w-100 mx-auto">
+        <div class="pb-2">
+            <span class="pe-2"><i class="fa-solid fa-link"></i></span>
+            <label for="bookMarkSite">site URL</label>
+        </div>
+        <input type="text" id="bookMarkSite" placeholder="Bookmark URL" oninput="regexUrlSite()" class="form-control p-2">
+        <p class="text-danger d-none" id="messageUrlSite"> You should enter a valid site name</p>
+    </div>
+
+    <button class="btn btn-submit " id="submitBtn" onclick="addSite()">Submit</button>
+
+</div>
+<div class="d-flex align-items-center justify-content-between container mt-5">
+    <div class="">
+    
+        <button class="btn btn-outline-success disabled " id="undoDeleteAllBtn" onclick="undoDeleteAll()">Undo Delete ALL</button>
+    </div>
+    <div class="">
+        <button class="btn btn-outline-danger " id="deleteAll" onclick="deleteAll()"> Delete All</button>
+    </div>
+</div>
+<table class="table container mt-5 text-center">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+        </tr>
+        <tbody id="tableBody">
+            
+        </tbody>
+        
+    </thead>
+</table>
+
+
+<div class="container my-4">
+    <button class="btn btn-success " id="undoDelete" onclick="undoDelete()"> Undo</button>
+    <p class="text-danger d-none" id="undoMessage"> You can only undo the last deleted site</p>
+</div>
+
+
+
+<div class="box d-none" id="myBox">
+    <div class="box-content rounded-2" id="myBoxContent">
+        <div class="box-header">
+            <div class="circles">
+                <span class="rounded-circle red me-1"></span>
+                <span class="rounded-circle yellow me-1"></span>
+                <span class="rounded-circle green me-1"></span>                
+            </div>
+            <div class="close-icon" id="closeIcon">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+            </div>
+        </div>
+        <p>
+            Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="ps-0">
+            <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters
+            </li>
+            
+            <li>
+                <i class="fa-regular fa-circle-right p-2 "></i>Site URL must be a valid one
+            </li>
+        </ol>
+    </div>
+
+</div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

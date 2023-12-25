@@ -1,0 +1,226 @@
+
+li{
+    list-style: none;
+}
+
+
+body{
+    background-color: #F7ECDE;
+}
+
+
+.bookmark-body {
+    border-top: 2px dotted;
+    border-bottom: 2px dotted;
+}
+.main-tittle{
+    margin-top: 70px;
+}
+.main-tittle h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+    color: #352e28;
+    text-transform: capitalize;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.main-tittle h1::before {
+    content: '';
+    background-color: #FEC260;
+    position: absolute;
+    bottom: 0px; 
+    left: 0;
+    width: 100%;
+    height: 25%; 
+    z-index: -1; 
+    transition: height 0.3s;
+}
+
+.main-tittle h1:hover::before{
+    height: 50%;
+}
+
+
+
+.bookmark-body h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.bookmark-body h2::before{
+    content: "\f02e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+}
+
+
+.bookmark-body h2::after{
+    content: "\f02e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    
+}
+
+
+
+
+.bookmark-body label{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.bookmark-body input::placeholder {
+   font-weight: 500;
+   color: #999;
+   font-family: 'PT Sans Caption', sans-serif;
+}
+    
+
+
+.form-control:focus {
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+  }
+
+.bookmark-body .btn-submit{
+    color: #fff;
+    background-color: #d1512d;
+    border: none;
+    padding-inline: 3rem;
+    transition: background-color 0.5s;
+}
+
+.bookmark-body .btn-submit:hover{
+    background-color: #bb4120;;
+}
+
+table .btn-visit{
+    color: #fff;
+    background-color: #9eb23b;
+    border: 1px solid #9eb23b;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'PT Sans Caption', sans-serif;
+    transition: background-color 0.3s , border 0.3s , color 0.3s;
+    
+
+}
+
+table .btn-visit i{
+    padding-inline: 3px;
+
+}
+
+table .btn-visit:hover{
+    background-color: #8a9e23;
+    border: 1px solid #6e8018;
+    color: #fff;
+}
+
+table .btn-delete{
+    color: #fff;
+    background-color: #eb1d36;
+    border: #eb1d36 1px solid;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'PT Sans Caption', sans-serif;
+    transition: background-color 0.3s , border 0.3s , color 0.3s;
+
+
+}
+
+table .btn-delete i{
+    padding-inline: 3px;
+
+}
+
+
+table .btn-delete:hover{
+    background-color: #d30820;;
+    border: 1px solid #ba081d;
+    color: #fff;
+}
+
+.box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    
+    
+}
+
+.box .box-content{
+    position: absolute;
+    background-color: #fff;
+    padding: 30px;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box .box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.box .circles span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+
+.box .box-header .circles .red{
+    background-color: #f15f5d;
+}
+
+.box .box-header .circles .yellow{
+    background-color: #febe2e;
+}
+
+.box .box-header .circles .green{
+    background-color: #4db748;
+}
+
+
+.box .box-header .close-icon{
+    cursor: pointer;
+}
+
+.box .box-content p{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+    text-align: left;
+    
+
+}
+
+.box .box-content ol li {
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.box .box-content ol li i{
+    color: #bb4120;
+}
